@@ -1,12 +1,28 @@
-import suggestions from '../data/suggestions-es';
+import suggestionsES from '../data/suggestions-es';
+import suggestionsEN from '../data/suggestions-en';
 
-let pendingSuggestions = suggestions.slice(0);
+const pendingSuggestions = [];
 const suggestionElement = document.querySelector('.suggestion');
 
-function showSuggestion() {
+function loadPendingSuggestions(suggestions) {
+  Array.prototype.push.apply(pendingSuggestions, suggestions);
+}
+
+function getNextSuggestion() {
   const suggestionIndex = Math.random() * pendingSuggestions.length;
-  const suggestion = pendingSuggestions.splice(suggestionIndex, 1);
+  return pendingSuggestions.splice(suggestionIndex, 1);
+}
+
+function showSuggestion(suggestion){
   suggestionElement.innerText = suggestion;
 }
 
-suggestionElement.addEventListener('click', showSuggestion);
+function showNextSuggestion(event) {
+  if (!pendingSuggestions.length) {
+    loadPendingSuggestions(suggestionsES);
+  }
+  const suggestion = getNextSuggestion();
+  showSuggestion(suggestion);
+}
+
+suggestionElement.addEventListener('click', showNextSuggestion);
