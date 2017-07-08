@@ -8,7 +8,7 @@
     "browserify": "browserify --debug src/js/main.js --outfile build/js/main.js -t [ babelify --presets [es2015] ]",
 
     "clean": "rimraf build && mkdirp build/js && mkdirp build/css",
-    "copy": "cpy 'src/index.html' build && cpy 'src/css/main.css' build/css"
+    "copy": "cpy 'src/index.html' build && cpy 'src/css/main.css' build/css && cpy 'src/manifest.json' build"
   },
   "author": "Jorge García Hinestrosa",
   "license": "MIT",

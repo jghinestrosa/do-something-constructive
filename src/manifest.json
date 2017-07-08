@@ -1,0 +1,6 @@
+{
+  "name": "Do something constructive",
+  "description": "A web application to help you deciding to do something constructive",
+  "start_url": "/",
+  "display": "standalone"
+}
