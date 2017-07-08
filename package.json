@@ -1,0 +1,20 @@
+{
+  "name": "do-something-constructive",
+  "version": "1.0.0",
+  "description": "A web application to help you deciding to do something constructive",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run copy && npm run browserify",
+    "browserify": "browserify --debug src/js/main.js --outfile build/js/main.js -t [ babelify --presets [es2015] ]",
+
+    "clean": "rimraf build && mkdirp build/js && mkdirp build/css",
+    "copy": "cpy 'src/index.html' build && cpy 'src/css/main.css' build/css"
+  },
+  "author": "Jorge García Hinestrosa",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0"
+  }
+}
