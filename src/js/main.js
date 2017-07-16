@@ -25,4 +25,4 @@ function showNextSuggestion(event) {
   showSuggestion(suggestion);
 }
 
-suggestionElement.addEventListener('click', showNextSuggestion);
+document.body.addEventListener('click', showNextSuggestion);
