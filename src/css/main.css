@@ -13,13 +13,13 @@ body {
 }
 
 .suggestion {
-  color: purple;
   color: #ec4add;
-  text-shadow: -2px 2px #5f005f;
-  font-size: 2em;
+  text-shadow: -2px 2px #5f005f, -3px 3px #5f005f;
+  font-size: 1.3em;
   text-align: center;
   padding: 0.5em;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  font-family: 'Press Start 2P', cursive;
 }
