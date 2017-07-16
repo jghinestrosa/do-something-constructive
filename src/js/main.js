@@ -19,7 +19,7 @@ function showSuggestion(suggestion){
 
 function showNextSuggestion(event) {
   if (!pendingSuggestions.length) {
-    loadPendingSuggestions(suggestionsES);
+    loadPendingSuggestions(suggestionsEN);
   }
   const suggestion = getNextSuggestion();
   showSuggestion(suggestion);
