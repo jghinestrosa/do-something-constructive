@@ -4,6 +4,12 @@ html, body {
   margin: 0;
   padding: 0;
   background: #000;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -18,8 +24,5 @@ body {
   font-size: 1.3em;
   text-align: center;
   padding: 0.5em;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
   font-family: 'Press Start 2P', cursive;
 }
