@@ -6,8 +6,22 @@ Inspired by the Monkey Island 2 ending (Relax, no story spoilers).
 
 ## Build
 
+First of all, install all dependencies:
+
 ```
-$ npm run build
+$ npm install
+```
+
+To build with source maps and without minifying files:
+
+```
+$ npm run build:debug
+```
+
+To build without source maps and minifying files:
+
+```
+$ npm run build:release
 ```
 
 ## License
